@@ -15,8 +15,14 @@ struct kasir{
 };
 
 void regis(){
+char simpan;	//untuk memilih simpan data registrasi atau tidak
+	
+isi_data:	//identifier isi_data
 struct kasir k1;
-  printf("Nama		:");
+	printf("\nREGISTRASI KASIR AYAM GEPREK '86'\n\n");
+	printf("Masukkan Data Diri Anda\n");
+	printf("---------------------------------------\n");
+  	printf("Nama		:");
 	scanf("%s", &k1.nama);
 	printf("Alamat		:");
 	scanf("%s", &k1.alamat);
@@ -28,7 +34,18 @@ struct kasir k1;
 	scanf("%s", &k1.user);
 	printf("Buat Password	:");
 	scanf("%s", &k1.pass);
+	printf("---------------------------------------\n");
+	printf("\nSimpan Data (Y) Atau Ulang (U) ?");
+	scanf("%s", &simpan);
+	if(simpan=='Y'|| simpan=='y'){
+		printf("Data Anda Telah Disimpan\n");
+	}
+	else {
+		system("cls");
+		goto isi_data;
+	}
 }
+
 void login(){
 	char user[20]; 	//input user pegawai
   	char pass[20]; 	//input password pegawai
