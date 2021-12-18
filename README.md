@@ -80,9 +80,41 @@ void login(){
 	while (ulang=='Y'|| ulang=='y'); 
 }
   
+  
 int main(){
-  char user[20]; 	//input user pegawai
-  char pass[20]; 	//input password pegawai
-  char ulang;		//mengulangi proses login ketika salah username dan atau password
-  char kembali;		//kembali mengulang kasir
-}
+
+  	int tujuan;		
+  	char ke_login;	
+				
+  	printf("--------------------------\n");
+  	printf("|    AYAM GEPREK '86'	  |\n");
+  	printf("--------------------------\n");
+  	printf("|1. Menu Registrasi kasir|\n");
+  	printf("|2. Menu Login Kasir	 |\n");
+  	printf("|3. Keluar		 |\n");
+  	printf("--------------------------\n\n");
+  	printf("Masukan Pilihan Anda :");
+  	scanf("%d", &tujuan);
+  	system("cls");
+  	switch(tujuan){
+  		case 1:
+  			regis();
+  			printf("\nLogin Kasir (Y/T)?");
+  			scanf("%s", &ke_login);
+  			if (ke_login=='Y'||ke_login=='y'){
+  				system("cls");
+  				login();	
+			}
+			else{
+				exit(0);
+			}
+  			break;
+  		case 2:
+  			login();
+			break;
+		default:
+			printf("Menu pulihan anda salah!\n");
+			break;
+	}
+ 	return (0);
+}  
