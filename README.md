@@ -49,7 +49,7 @@ struct kasir k1;
 void login(){
 	char user[20]; 	//input user pegawai
   	char pass[20]; 	//input password pegawai
-  	char ulang;		//mengulangi proses login ketika salah username dan atau password
+  	char ulang; //mengulangi proses login ketika salah username dan password
 	do{
 		printf("************Login Kasir**************\n");
 		printf("\n Masukan Username	: ");
@@ -85,7 +85,7 @@ int main(){
 
   	int tujuan;		
   	char ke_login;	
-				
+	awal:			
   	printf("--------------------------\n");
   	printf("|    AYAM GEPREK '86'	  |\n");
   	printf("--------------------------\n");
@@ -112,8 +112,15 @@ int main(){
   		case 2:
   			login();
 			break;
+		case 3:
+			exit(0);
+			break;
 		default:
 			printf("Menu pulihan anda salah!\n");
+			printf("Tekan ENTER untuk mengulang\n");
+			system("pause");
+			system("cls");
+			goto awal;
 			break;
 	}
  	return (0);
