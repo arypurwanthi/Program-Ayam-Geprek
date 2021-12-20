@@ -5,9 +5,9 @@ Program Kasir dengan Bahasa C
 #include <stdlib.h>
 #include <time.h>
 
-void regis();		//deklarasi fungsi regis
-void login();		//deklarasi fungsi login
-void menu(void);	//deklarasi fungsi menu
+void regis();		
+void login();		
+void menu(void);	
 
 struct kasir{
 	char nama[20];
