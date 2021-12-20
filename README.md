@@ -79,6 +79,20 @@ void login(){
 	}
 	while (ulang=='Y'|| ulang=='y'); 
 }
+
+void menu(void){
+	printf(" Selamat Datang di Ayam Geprek'86' \n");
+	printf("===================================\n");
+	printf("|               MENU              |\n");
+	printf("===================================\n");
+	printf("|1. Dada                Rp 10.000 |\n");
+	printf("|2. Paha                Rp 8.000  |\n");
+	printf("|3. Sayap               Rp 6.000  |\n");
+	printf("|4. Nasi                Rp 5.000  |\n");
+	printf("|5. Minuman(EsTeh)      Rp 3.000  |\n");
+	printf("===================================\n");
+}
+
   
   
 int main(){
