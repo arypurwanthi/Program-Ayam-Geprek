@@ -8,6 +8,7 @@ Program Kasir dengan Bahasa C
 void regis();		
 void login();		
 void menu(void);	
+void pesan();		
 
 struct kasir{
 	char nama[20];
@@ -178,7 +179,33 @@ void pesan(){
   }
   printf("\n");
   
-  
+  /*Struk belanja*/
+  	printf("\n");
+	printf("===================================\n");
+	printf("||        AYAM GEPREK'86         ||\n");
+	printf("||      JL. ANTASURA-DENPASAR    ||\n");
+	printf("===================================\n");
+	printf("Kasir :");
+	scanf("%s", &kasir[10]);
+	time(&t);
+	printf("%s", ctime(&t));
+	printf("-----------------------------------\n");
+  	printf("Pesanan   	Jumlah     	Harga\n");
+  	for(i=0; i<jmlh_pesan; i++){
+    	printf("%s      	%d x %d    	%d", nama[i], jumlah[i], harga_satuan[i], harga[i]);
+    	printf("\n");
+  	}
+	printf("-----------------------------------\n");
+  	printf("total		:Rp %d\n", total);
+	printf("cash		:Rp ");
+	scanf("%d", &cash);
+	kembalian= cash-total;
+	printf("kembalian	:Rp %d\n",kembalian);
+	printf("-----------------------------------\n");
+	printf("TERIMA KASIH TELAH BERBELANJA!\n");
+	printf("Silahkan Berbelanja Kembali!!");
+	printf("\n");
+	
 int main(){
 
   	int tujuan;		
