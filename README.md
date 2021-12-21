@@ -97,6 +97,59 @@ void menu(void){
 	printf("===================================\n");
 }
 
+void pesan(){
+  int jmlh_pesan;		
+  int i;				
+  int kode;				
+  int jumlah[10];		
+  int harga_satuan[10];	
+  int harga[20];		
+  char nama[10][10];	
+  char kasir[10];		
+  int total=0;			
+  time_t t;				
+  int cash;				
+  int kembalian;		
+  char kembali;			
+
+  printf("\nJumlah jenis pesanan 	:");
+  scanf("%d",&jmlh_pesan);
+  for(i=0;i<jmlh_pesan;i++){
+  	pesan:				
+  	printf("\n");
+  	printf("\nKode pesanan 		:");
+	scanf("%d", &kode);
+    switch(kode){
+	case 1:
+	  	printf("Nama pesanan 	:");
+	  	scanf("%s", &nama[i]);
+	    printf("Jumlah pesanan	:");
+	    scanf("%d", &jumlah[i]);
+      	harga_satuan[i]=10000;
+	    printf("Harga satuan	:%d\n", harga_satuan[i]);
+	    harga[i]= harga_satuan[i]*jumlah[i];
+	    printf("Harga 		:%d\n", harga[i]);
+	    break;
+    case 2:
+      	printf("Nama pesanan 		:");
+      	scanf("%s", &nama[i]);
+	    printf("Jumlah pesanan 	:");
+	    scanf("%d", &jumlah[i]);
+      	harga_satuan[i]=8000;
+	    printf("Harga satuan 	:%d\n", harga_satuan[i]);
+	    harga[i]= harga_satuan[i]*jumlah[i];
+	    printf("Harga 		:%d\n", harga[i]);
+	    break;
+    case 3:
+      	printf("Nama pesanan 		:");
+      	scanf("%s", &nama[i]);
+	    printf("Jumlah pesanan 	:");
+	    scanf("%d", &jumlah[i]);
+      	harga_satuan[i]=6000;
+	    printf("Harga satuan 	:%d\n", harga_satuan[i]);
+	    harga[i]= harga_satuan[i]*jumlah[i];
+	    printf("Harga 		:%d\n", harga[i]);
+	    break;
   
   
 int main(){
