@@ -141,7 +141,7 @@ void pesan(){
 	  printf("Harga 		:%d\n", harga[i]);
 	  break;
         case 3:
-      	  printf("Nama pesanan 		:");
+          printf("Nama pesanan 		:");
       	  scanf("%s", &nama[i]);
 	  printf("Jumlah pesanan 	:");
 	  scanf("%d", &jumlah[i]);
@@ -150,6 +150,33 @@ void pesan(){
 	  harga[i]= harga_satuan[i]*jumlah[i];
 	  printf("Harga 		:%d\n", harga[i]);
 	  break;
+	case 4:
+	  printf("Nama pesanan 		:");
+	  scanf("%s", &nama[i]);
+	  printf("Jumlah pesanan 	:");
+	  scanf("%d", &jumlah[i]);
+      	  harga_satuan[i]=5000;
+	  printf("Harga satuan 		:%d\n", harga_satuan[i]);
+	  harga[i]= harga_satuan[i]*jumlah[i];
+	  printf("Harga 		:%d\n", harga[i]);
+	  break;
+    	case 5:
+      	  printf("Nama pesanan 		:");
+      	  scanf("%s", &nama[i]);
+	  printf("Jumlah pesanan 	:");
+	  scanf("%d", &jumlah[i]);
+       	  harga_satuan[i]=3000;
+	  printf("Harga satuan 		:%d\n", harga_satuan[i]);
+	  harga[i]= harga_satuan[i]*jumlah[i];
+	  printf("Harga 		:%d\n", harga[i]);
+	  break;
+    	default :
+	  printf("Kode menu salah!, ulangi input kode");
+	  goto pesan;
+   } 
+   total+=harga[i];
+  }
+  printf("\n");
   
   
 int main(){
