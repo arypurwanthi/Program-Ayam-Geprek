@@ -5,10 +5,10 @@ Program Kasir dengan Bahasa C
 #include <stdlib.h>
 #include <time.h>
 
-void regis();		
-void login();		
-void menu(void);	
-void pesan();		
+void regis();		//deklarasi fungsi regis	
+void login();		//deklarasi fungsi login
+void menu(void);	//deklarasi fungsi menu
+void pesan();		//deklarasi fungsi pesan		
 
 struct kasir{
 	char nama[20];
@@ -19,6 +19,7 @@ struct kasir{
 	char pass[20];
 };
 
+/*fungsi dengan argumen untuk proses registrasi*/
 void regis(){
 char simpan;	//untuk memilih simpan data registrasi atau tidak
 	
@@ -51,10 +52,11 @@ struct kasir k1;
 	}
 }
 
+/*fungsi dengan argumen untuk login kasir*/
 void login(){
 	char user[20]; 	//input user pegawai
   	char pass[20]; 	//input password pegawai
-  	char ulang; //mengulangi proses login ketika salah username dan password
+  	char ulang;	//mengulangi proses login ketika salah username dan atau password
 	do{
 		printf("************Login Kasir**************\n");
 		printf("\n Masukan Username	: ");
@@ -87,6 +89,7 @@ void login(){
 	while (ulang=='Y'|| ulang=='y'); 
 }
 
+/*fungsi tanpa argumen untuk menampilkan menu makanan*/
 void menu(void){
 	printf(" Selamat Datang di Ayam Geprek'86' \n");
 	printf("===================================\n");
@@ -100,25 +103,26 @@ void menu(void){
 	printf("===================================\n");
 }
 
+/*Fungsi dengan argumen untuk pemesanan dan struk*/
 void pesan(){
-  int jmlh_pesan;		
-  int i;				
-  int kode;				
-  int jumlah[10];		
-  int harga_satuan[10];	
-  int harga[20];		
-  char nama[10][10];	
-  char kasir[10];		
-  int total=0;			
-  time_t t;				
-  int cash;				
-  int kembalian;		
-  char kembali;			
+  int jmlh_pesan;		//banyaknya pesanan berdasarkan jenis menu
+  int i;			//variavel looping untuk pemesanan
+  int kode;			//kode menu yang dipesanan
+  int jumlah[10];		//jumlah pesanan per menu yang dipesan
+  int harga_satuan[10];		//harga satuan menu
+  int harga[20];		//harga satuan dikalikan jumlah pesan
+  char nama[10][10];		//nama menu pesanan
+  char kasir[10];		//nama kasir
+  int total=0;			//total pembayaran semua pesanan
+  time_t t;			//waktu pembayaran di kasir
+  int cash;			//jumlah uang yang diberikan pembeli
+  int kembalian;		//kembalian dari uang yang dibayar pembeli
+  char kembali;			//kembali mengulang kasir untuk pembayaran kasir berikutnya		
 
   printf("\nJumlah jenis pesanan 	:");
   scanf("%d",&jmlh_pesan);
   for(i=0;i<jmlh_pesan;i++){
-  	pesan:				
+  	pesan:			// identifier pesan		
   	printf("\n");
   	printf("\nKode pesanan 		:");
 	scanf("%d", &kode);
