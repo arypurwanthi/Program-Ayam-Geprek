@@ -68,6 +68,8 @@ void login(){
 		printf("Tekan ENTER untuk lanjut\n");
 		system ("pause");
 		system("cls");
+		menu();
+		pesan();
 		}
 		else if((strcmp(user,"kasir1")!=0 && strcmp(pass, "ary")!=0) || (strcmp(user,"kasir2")!=0 && strcmp(pass, "asty")!=0)){
 		printf ("\nUsername atau Password salah \n");
