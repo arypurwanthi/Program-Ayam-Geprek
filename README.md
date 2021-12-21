@@ -119,37 +119,37 @@ void pesan(){
   	printf("\n");
   	printf("\nKode pesanan 		:");
 	scanf("%d", &kode);
-    switch(kode){
+    	switch(kode){
 	case 1:
-	  	printf("Nama pesanan 	:");
-	  	scanf("%s", &nama[i]);
-	    printf("Jumlah pesanan	:");
-	    scanf("%d", &jumlah[i]);
-      	harga_satuan[i]=10000;
-	    printf("Harga satuan	:%d\n", harga_satuan[i]);
-	    harga[i]= harga_satuan[i]*jumlah[i];
-	    printf("Harga 		:%d\n", harga[i]);
-	    break;
-    case 2:
-      	printf("Nama pesanan 		:");
-      	scanf("%s", &nama[i]);
-	    printf("Jumlah pesanan 	:");
-	    scanf("%d", &jumlah[i]);
-      	harga_satuan[i]=8000;
-	    printf("Harga satuan 	:%d\n", harga_satuan[i]);
-	    harga[i]= harga_satuan[i]*jumlah[i];
-	    printf("Harga 		:%d\n", harga[i]);
-	    break;
-    case 3:
-      	printf("Nama pesanan 		:");
-      	scanf("%s", &nama[i]);
-	    printf("Jumlah pesanan 	:");
-	    scanf("%d", &jumlah[i]);
-      	harga_satuan[i]=6000;
-	    printf("Harga satuan 	:%d\n", harga_satuan[i]);
-	    harga[i]= harga_satuan[i]*jumlah[i];
-	    printf("Harga 		:%d\n", harga[i]);
-	    break;
+	  printf("Nama pesanan 		:");
+	  scanf("%s", &nama[i]);
+	  printf("Jumlah pesanan	:");
+	  scanf("%d", &jumlah[i]);
+      	  harga_satuan[i]=10000;
+	  printf("Harga satuan		:%d\n", harga_satuan[i]);
+	  harga[i]= harga_satuan[i]*jumlah[i];
+	  printf("Harga 		:%d\n", harga[i]);
+	  break;
+    	case 2:
+      	  printf("Nama pesanan 		:");
+      	  scanf("%s", &nama[i]);
+	  printf("Jumlah pesanan 	:");
+	  scanf("%d", &jumlah[i]);
+      	  harga_satuan[i]=8000;
+	  printf("Harga satuan 		:%d\n", harga_satuan[i]);
+	  harga[i]= harga_satuan[i]*jumlah[i];
+	  printf("Harga 		:%d\n", harga[i]);
+	  break;
+        case 3:
+      	  printf("Nama pesanan 		:");
+      	  scanf("%s", &nama[i]);
+	  printf("Jumlah pesanan 	:");
+	  scanf("%d", &jumlah[i]);
+      	  harga_satuan[i]=6000;
+	  printf("Harga satuan 		:%d\n", harga_satuan[i]);
+	  harga[i]= harga_satuan[i]*jumlah[i];
+	  printf("Harga 		:%d\n", harga[i]);
+	  break;
   
   
 int main(){
