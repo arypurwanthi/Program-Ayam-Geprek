@@ -206,6 +206,23 @@ void pesan(){
 	printf("Silahkan Berbelanja Kembali!!");
 	printf("\n");
 	
+do{
+	printf("\n");
+	printf("Ulangi kasir (Y/T) ?");
+	scanf("%s",&kembali);
+	if(kembali=='Y'|| kembali=='y'){
+		system("cls");
+	  	menu();
+	  	pesan();
+ 	}
+  	else{
+  		exit(0);
+ 	}
+}
+	while(kembali=='y'||kembali=='Y');
+}
+	
+	
 int main(){
 
   	int tujuan;		
