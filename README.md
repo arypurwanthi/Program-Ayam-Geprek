@@ -1,5 +1,6 @@
 # Program-Ayam-Geprek
 Program Kasir dengan Bahasa C
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -11,12 +12,12 @@ void menu(void);	//deklarasi fungsi menu
 void pesan();		//deklarasi fungsi pesan		
 
 struct kasir{
-	char nama[20];
-	char alamat[20];
-	int umur;
-	char telp[15];
-	char user[20];
-	char pass[20];
+	char nama[20];	 //nama kasir yang registrasi
+	char alamat[20]; //alamat kasir yang registrasi 
+	int umur;	 //umur kasir yang registrasi
+	char telp[15];	 //no HP kasiy yang rgistrasi
+	char user[20];	 //username yang dibuat oleh kasir yang registrasi
+	char pass[20];	 //password yang dibuat oleh kasir yang registrasi
 };
 
 /*fungsi dengan argumen untuk proses registrasi*/
@@ -212,6 +213,7 @@ void pesan(){
 	printf("Silahkan Berbelanja Kembali!!");
 	printf("\n");
 	
+/*repetisi ketika ingin mengulang pembayaran di kasir tanpa perlu login kembali*/
 do{
 	printf("\n");
 	printf("Ulangi kasir (Y/T) ?");
@@ -228,12 +230,12 @@ do{
 	while(kembali=='y'||kembali=='Y');
 }
 	
-	
+/*fungsi utama*/	
 int main(){
 
-  	int tujuan;		
-  	char ke_login;	
-	awal:			
+  	int tujuan;	//pilihan menu tujuan registrasi atau login
+  	char ke_login;	//untuk memilih setelah regis ke menu login atau keluar
+	awal:		//identifier awal	
   	printf("--------------------------\n");
   	printf("|    AYAM GEPREK '86'	  |\n");
   	printf("--------------------------\n");
