@@ -10,7 +10,7 @@ void pesan();		//deklarasi fungsi pesan
 struct kasir{
 	char nama[20];		//nama kasir yang registrasi
 	char alamat[20];	//alamat kasir yang registrasi
-	int umur;			//umur kasir yang registrasi
+	int umur;		//umur kasir yang registrasi
 	char telp[15];		//no HP kasir yang registrasi
 	char user[20];		//username yang dibuat oleh kasir yang registrasi
 	char pass[20];		//password yang dibuat oleh kasir yang registrasi
