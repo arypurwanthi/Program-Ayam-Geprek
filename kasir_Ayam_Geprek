@@ -1,10 +1,10 @@
 # Program-Ayam-Geprek
 Program Kasir dengan Bahasa C
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
+#include <stdio.h>	//deklarasi library yang digunakan untuk fungsi input dan output
+#include <string.h>	//deklarasi library yang digunakan untuk data yang berlinai string 
+#include <stdlib.h>	//deklarasi library yang digunakan untuk sytem cls dan pause
+#include <time.h>	//deklarasi library yang digunakan untuk menampilkan waktu sekarang
 
 void regis();		//deklarasi fungsi regis	
 void login();		//deklarasi fungsi login
@@ -186,49 +186,7 @@ void pesan(){
   }
   printf("\n");
   
-  /*Struk belanja*/
-  	printf("\n");
-	printf("===================================\n");
-	printf("||        AYAM GEPREK'86         ||\n");
-	printf("||      JL. ANTASURA-DENPASAR    ||\n");
-	printf("===================================\n");
-	printf("Kasir :");
-	scanf("%s", &kasir[10]);
-	time(&t);
-	printf("%s", ctime(&t));
-	printf("-----------------------------------\n");
-  	printf("Pesanan   	Jumlah     	Harga\n");
-  	for(i=0; i<jmlh_pesan; i++){
-    	printf("%s      	%d x %d    	%d", nama[i], jumlah[i], harga_satuan[i], harga[i]);
-    	printf("\n");
-  	}
-	printf("-----------------------------------\n");
-  	printf("total		:Rp %d\n", total);
-	printf("cash		:Rp ");
-	scanf("%d", &cash);
-	kembalian= cash-total;
-	printf("kembalian	:Rp %d\n",kembalian);
-	printf("-----------------------------------\n");
-	printf("TERIMA KASIH TELAH BERBELANJA!\n");
-	printf("Silahkan Berbelanja Kembali!!");
-	printf("\n");
-	
-/*repetisi ketika ingin mengulang pembayaran di kasir tanpa perlu login kembali*/
-do{
-	printf("\n");
-	printf("Ulangi kasir (Y/T) ?");
-	scanf("%s",&kembali);
-	if(kembali=='Y'|| kembali=='y'){
-		system("cls");
-	  	menu();
-	  	pesan();
- 	}
-  	else{
-  		exit(0);
- 	}
-}
-	while(kembali=='y'||kembali=='Y');
-}
+ 
 	
 /*fungsi utama*/	
 int main(){
