@@ -57,8 +57,8 @@ void regis(){
 
 /*fungsi dengan argumen untuk login kasir*/
 void login(){
-	char user[20]; 	//input user pegawai
-  	char pass[20]; 	//input password pegawai
+	char user[20]; 		//input user pegawai
+  	char pass[20]; 		//input password pegawai
   	char ulang;		//mengulangi proses login ketika salah username dan atau password
 	do{
 		printf("\t\t\t\t************Login Kasir**************\n\n");
@@ -118,16 +118,16 @@ void menu(void){
 /*Fungsi dengan argumen untuk pemesanan dan struk*/
 void pesan(){
   int jmlh_pesan;		//banyaknya pesanan berdasarkan jenis menu
-  int i;				//variavel looping untuk pemesanan
-  int kode;				//kode menu yang dipesanan
+  int i;			//variavel looping untuk pemesanan
+  int kode;			//kode menu yang dipesanan
   int jumlah[10];		//jumlah pesanan per menu yang dipesan
-  int harga_satuan[10];	//harga satuan menu
+  int harga_satuan[10];		//harga satuan menu
   int harga[20];		//harga satuan dikalikan jumlah pesan
-  char nama[10][10];	//nama menu pesanan
+  char nama[10][10];		//nama menu pesanan
   char kasir[10];		//nama kasir
   int total=0;			//total pembayaran semua pesanan
-  time_t t;				//waktu pembayaran di kasir
-  int cash;				//jumlah uang yang diberikan pembeli
+  time_t t;			//waktu pembayaran di kasir
+  int cash;			//jumlah uang yang diberikan pembeli
   int kembalian;		//kembalian dari uang yang dibayar pembeli
   char kembali;			//kembali mengulang kasir untuk pembayaran kasir berikutnya
 
@@ -135,7 +135,7 @@ void pesan(){
   scanf("%d",&jmlh_pesan);
   printf("-----------------------------");
   for(i=0;i<jmlh_pesan;i++){
-  	pesan:				// identifier pesan
+  	pesan:			// identifier pesan
   	printf("\n");
   	printf("\nKode pesanan 	:");
 	scanf("%d", &kode);
