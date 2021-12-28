@@ -250,7 +250,7 @@ void pesan(){
 /*fungsi utama*/
 int main(){
   	int tujuan;		//pilihan menu tujuan registrasi atau login
-  	char ke_login;	//untuk memilih setelah regis ke menu login atau keluar
+  	char ke_login;		//untuk memilih setelah regis ke menu login atau keluar
   	
   	awal:			//identifier awal
   	printf("\t\t\t\t--------------------------\n");
@@ -296,4 +296,3 @@ int main(){
 	}
  	return (0);
 }  	
-
