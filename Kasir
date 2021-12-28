@@ -1,7 +1,7 @@
-#include <stdio.h>	//liberary
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
+#include <stdio.h>	//library yang digunakan untuk proses input dan output
+#include <string.h>	//library yang digunakan untuk tipe data string
+#include <stdlib.h>	//library yang digunakan untuk menampilkan system cls, pause
+#include <time.h>	//library yang digunakan untuk menampilkan waktu sekarang
 void regis();		//deklarasi fungsi regis
 void login();		//deklarasi fungsi login
 void menu(void);	//deklarasi fungsi menu
