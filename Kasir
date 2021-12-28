@@ -18,7 +18,7 @@ struct kasir{
 
 /*fungsi dengan argumen untuk proses registrasi*/
 void regis(){
-	char simpan;	//untuk memilih simpan data registrasi atau tidak
+	char simpan;		//untuk memilih simpan data registrasi atau tidak
 	
 	isi_data:		//identifier isi_data
 	struct kasir k1;
