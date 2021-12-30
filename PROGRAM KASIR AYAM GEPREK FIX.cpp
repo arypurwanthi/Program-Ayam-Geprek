@@ -4,13 +4,13 @@
 #include <time.h>
 void regis();		//deklarasi fungsi regis
 void login();		//deklarasi fungsi login
-void menu(void);	//deklarasi fungsi menu
+void menu();		//deklarasi fungsi menu
 void pesan();		//deklarasi fungsi pesan
 
 struct kasir{
 	char nama[20];		//nama kasir yang registrasi
 	char alamat[20];	//alamat kasir yang registrasi
-	int umur;			//umur kasir yang registrasi
+	int umur;		//umur kasir yang registrasi
 	char telp[15];		//no HP kasir yang registrasi
 	char user[20];		//username yang dibuat oleh kasir yang registrasi
 	char pass[20];		//password yang dibuat oleh kasir yang registrasi
@@ -101,38 +101,35 @@ void login(){
 }
 
 
-/*fungsi tanpa argumen untuk menampilkan menu makanan*/
-void menu(void){
-	
-	printf("\n");
-	printf(" \t\tSelamat Datang di Ayam Geprek'86' \n");
-	printf("\t\t===================================\n");
-	printf("\t\t|               MENU              |\n");
-	printf("\t\t===================================\n");
-	printf("\t\t|1. Dada                Rp 10.000 |\n");
-	printf("\t\t|2. Paha                Rp 8.000  |\n");
-	printf("\t\t|3. Sayap               Rp 6.000  |\n");
-	printf("\t\t|4. Nasi                Rp 5.000  |\n");
-	printf("\t\t|5. Minuman(EsTeh)      Rp 3.000  |\n");
-	printf("\t\t===================================\n");
+/*fungsi dengan argumen untuk menampilkan menu makanan yang diambil dari file dmenu.txt*/
+void menu(){
+	char buff[100];
+	FILE*in;
+	if((in=fopen("dmenu.txt", "r"))==NULL){
+		printf("File Kosong!");
+	}
+	while(fgets(buff, sizeof(buff), in)){
+		printf("%s",buff);
+	}
+	fclose(in);
 }
 
 
 /*Fungsi dengan argumen untuk pemesanan dan struk*/
 void pesan(){
-  int jmlh_pesan;		//banyaknya pesanan berdasarkan jenis menu
-  int i;				//variavel looping untuk pemesanan
-  int kode;				//kode menu yang dipesanan
-  int jumlah[10];		//jumlah pesanan per menu yang dipesan
+  int jmlh_pesan;	//banyaknya pesanan berdasarkan jenis menu
+  int i;		//variavel looping untuk pemesanan
+  int kode;		//kode menu yang dipesanan
+  int jumlah[10];	//jumlah pesanan per menu yang dipesan
   int harga_satuan[10];	//harga satuan menu
-  int harga[20];		//harga satuan dikalikan jumlah pesan
+  int harga[20];	//harga satuan dikalikan jumlah pesan
   char nama[10][10];	//nama menu pesanan
-  char kasir[10];		//nama kasir
-  int total=0;			//total pembayaran semua pesanan
-  time_t t;				//waktu pembayaran di kasir
-  int cash;				//jumlah uang yang diberikan pembeli
-  int kembalian;		//kembalian dari uang yang dibayar pembeli
-  char kembali;			//kembali mengulang kasir untuk pembayaran kasir berikutnya
+  char kasir[10];	//nama kasir
+  int total=0;		//total pembayaran semua pesanan
+  time_t t;		//waktu pembayaran di kasir
+  int cash;		//jumlah uang yang diberikan pembeli
+  int kembalian;	//kembalian dari uang yang dibayar pembeli
+  char kembali;		//kembali mengulang kasir untuk pembayaran kasir berikutnya
 
   printf("\nJumlah jenis pesanan 	:");
   scanf("%d",&jmlh_pesan);
@@ -144,56 +141,56 @@ void pesan(){
 	scanf("%d", &kode);
     switch(kode){
 	case 1:
-	  	printf("Nama pesanan 	:");
+	 	printf("Nama pesanan 	:");
 	  	scanf("%s", &nama[i]);
-	    printf("Jumlah pesanan	:");
-	    scanf("%d", &jumlah[i]);
-      	harga_satuan[i]=10000;
-	    printf("Harga satuan	:Rp.%d\n", harga_satuan[i]);
-	    harga[i]= harga_satuan[i]*jumlah[i];
-	    printf("Harga 		:Rp.%d\n", harga[i]);
-	    break;
-    case 2:
-      	printf("Nama pesanan 	:");
-      	scanf("%s", &nama[i]);
-	    printf("Jumlah pesanan 	:");
-	    scanf("%d", &jumlah[i]);
-      	harga_satuan[i]=8000;
-	    printf("Harga satuan 	:Rp.%d\n", harga_satuan[i]);
-	    harga[i]= harga_satuan[i]*jumlah[i];
-	    printf("Harga 		:Rp.%d\n", harga[i]);
-	    break;
-    case 3:
-      	printf("Nama pesanan 	:");
-      	scanf("%s", &nama[i]);
-	    printf("Jumlah pesanan 	:");
-	    scanf("%d", &jumlah[i]);
-      	harga_satuan[i]=6000;
-	    printf("Harga satuan 	:Rp.%d\n", harga_satuan[i]);
-	    harga[i]= harga_satuan[i]*jumlah[i];
-	    printf("Harga 		:Rp.%d\n", harga[i]);
-	    break;
-    case 4:
-      	printf("Nama pesanan 	:");
-      	scanf("%s", &nama[i]);
-	    printf("Jumlah pesanan 	:");
-	    scanf("%d", &jumlah[i]);
-      	harga_satuan[i]=5000;
-	    printf("Harga satuan 	:Rp.%d\n", harga_satuan[i]);
-	    harga[i]= harga_satuan[i]*jumlah[i];
-	    printf("Harga 		:Rp.%d\n", harga[i]);
-	    break;
-    case 5:
-      	printf("Nama pesanan 	:");
-      	scanf("%s", &nama[i]);
-	    printf("Jumlah pesanan 	:");
-	    scanf("%d", &jumlah[i]);
-       	harga_satuan[i]=3000;
-	    printf("Harga satuan 	:Rp.%d\n", harga_satuan[i]);
-	    harga[i]= harga_satuan[i]*jumlah[i];
-	    printf("Harga 		:Rp.%d\n", harga[i]);
-	    break;
-    default :
+	  	printf("Jumlah pesanan	:");
+	  	scanf("%d", &jumlah[i]);
+      	  	harga_satuan[i]=10000;
+	  	printf("Harga satuan	:Rp.%d\n", harga_satuan[i]);
+	    	harga[i]= harga_satuan[i]*jumlah[i];
+	    	printf("Harga 		:Rp.%d\n", harga[i]);
+	    	break;
+    	case 2:
+      		printf("Nama pesanan 	:");
+      		scanf("%s", &nama[i]);
+	    	printf("Jumlah pesanan 	:");
+	    	scanf("%d", &jumlah[i]);
+      		harga_satuan[i]=8000;
+	    	printf("Harga satuan 	:Rp.%d\n", harga_satuan[i]);
+	    	harga[i]= harga_satuan[i]*jumlah[i];
+	    	printf("Harga 		:Rp.%d\n", harga[i]);
+	    	break;
+    	case 3:
+      		printf("Nama pesanan 	:");
+      		scanf("%s", &nama[i]);
+	    	printf("Jumlah pesanan 	:");
+	    	scanf("%d", &jumlah[i]);
+      		harga_satuan[i]=6000;
+	    	printf("Harga satuan 	:Rp.%d\n", harga_satuan[i]);
+	    	harga[i]= harga_satuan[i]*jumlah[i];
+	    	printf("Harga 		:Rp.%d\n", harga[i]);
+	    	break;
+    	case 4:
+      		printf("Nama pesanan 	:");
+      		scanf("%s", &nama[i]);
+	    	printf("Jumlah pesanan 	:");
+	    	scanf("%d", &jumlah[i]);
+      		harga_satuan[i]=5000;
+	    	printf("Harga satuan 	:Rp.%d\n", harga_satuan[i]);
+	    	harga[i]= harga_satuan[i]*jumlah[i];
+	    	printf("Harga 		:Rp.%d\n", harga[i]);
+	    	break;
+    	case 5:
+      		printf("Nama pesanan 	:");
+      		scanf("%s", &nama[i]);
+	    	printf("Jumlah pesanan 	:");
+	    	scanf("%d", &jumlah[i]);
+       		harga_satuan[i]=3000;
+	    	printf("Harga satuan 	:Rp.%d\n", harga_satuan[i]);
+	    	harga[i]= harga_satuan[i]*jumlah[i];
+	    	printf("Harga 		:Rp.%d\n", harga[i]);
+	    	break;
+    	default :
 		printf("Kode menu salah!, ulangi input kode");
 		goto pesan;
    } 
@@ -253,7 +250,7 @@ void pesan(){
 
 /*fungsi utama*/
 int main(){
-  	int tujuan;		//pilihan menu tujuan registrasi atau login
+  	int tujuan;	//pilihan menu tujuan registrasi atau login
   	char ke_login;	//untuk memilih setelah regis ke menu login atau keluar
   	
   	awal:			//identifier awal
