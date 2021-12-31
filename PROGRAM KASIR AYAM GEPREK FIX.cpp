@@ -247,13 +247,13 @@ void pesan(){
 	
 	printf("\t\t\t\t-----------------------------------\n");
   	printf("\t\t\t\ttotal		:Rp %d\n", total);
-	fprintf(out,"Total 		: %d\n", total);
+	fprintf(out,"Total 		:Rp %d\n", total);
 	printf("\t\t\t\tcash		:Rp ");
 	scanf("%d", &cash);
-	fprintf(out,"Chas 		: %d\n", cash);
+	fprintf(out,"Chas 		:Rp %d\n", cash);
 	kembalian= cash-total;
 	printf("\t\t\t\tkembalian	:Rp %d\n",kembalian);
-	fprintf(out,"Kembalian	: %d\n", kembalian);
+	fprintf(out,"Kembalian	:Rp %d\n", kembalian);
 	fprintf(out, "--------------------------------------------------------\n\n");
 	fclose(out);
 	printf("\t\t\t\t-----------------------------------\n");
