@@ -130,7 +130,9 @@ void pesan(){
   int cash;		//jumlah uang yang diberikan pembeli
   int kembalian;	//kembalian dari uang yang dibayar pembeli
   char kembali;		//kembali mengulang kasir untuk pembayaran kasir berikutnya
-
+  FILE*out;
+  out=fopen("buktrans.txt","a");
+	
   printf("\nJumlah jenis pesanan 	:");
   scanf("%d",&jmlh_pesan);
   printf("-----------------------------");
@@ -216,18 +218,27 @@ void pesan(){
 	fflush(stdin);
 	time(&t);
 	printf("\t\t\t\t%s", ctime(&t));
+	fprintf(out,"%s\n", ctime(&t));
 	printf("\t\t\t\t-----------------------------------\n");
   	printf("\t\t\t\tPesanan   	Jumlah     	Harga\n");
+	fprintf(out,"Pesanan		Jumlah		Harga\n");
   	for(i=0; i<jmlh_pesan; i++){
-    	printf("\t\t\t\t%s      	%d x %d    	%d", nama[i], jumlah[i], harga_satuan[i], harga[i]);
-    	printf("\n");
+    		printf("\t\t\t\t%s      	%d x %d    	%d", nama[i], jumlah[i], harga_satuan[i], harga[i]);
+    		printf("\n");
+		fprintf(out,"%s		%d X %d	%d", nama[i], jumlah[i], harga_satuan[i], harga[i]);
+    		fprintf(out,"\n");
   	}
 	printf("\t\t\t\t-----------------------------------\n");
   	printf("\t\t\t\ttotal		:Rp %d\n", total);
+	fprintf(out,"Total 		: %d\n", total);
 	printf("\t\t\t\tcash		:Rp ");
 	scanf("%d", &cash);
+	fprintf(out,"Chas 		: %d\n", cash);
 	kembalian= cash-total;
 	printf("\t\t\t\tkembalian	:Rp %d\n",kembalian);
+	fprintf(out,"Kembalian	: %d\n", kembalian);
+	fprintf(out, "--------------------------------------------------------\n\n");
+	fclose(out);
 	printf("\t\t\t\t-----------------------------------\n");
 	printf("\t\t\t\tTERIMA KASIH TELAH BERBELANJA!\n");
 	printf("\t\t\t\tSilahkan Berbelanja Kembali!!\n");
