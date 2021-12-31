@@ -1,0 +1,46 @@
+		RECORD TRANSAKSI DI AYAM GEPREK '86'
+=========================================================
+Kasir bertugas : Asty
+Fri Dec 31 09:56:52 2021
+
+Pesanan		Jumlah		Harga
+Dada		3 X 10000	30000
+Minuman		3 X 3000	9000
+Total 		: 39000
+Chas 		: 40000
+Kembalian	: 1000
+--------------------------------------------------------
+
+Kasir bertugas : Asty
+Fri Dec 31 09:57:08 2021
+
+Pesanan		Jumlah		Harga
+Nasi		5 X 5000	25000
+Total 		: 25000
+Chas 		: 50000
+Kembalian	: 25000
+--------------------------------------------------------
+
+Kasir bertugas : Asty
+Fri Dec 31 14:32:29 2021
+
+Pesanan		Jumlah		Harga
+Dada		1 X 10000	10000
+Total 		: 10000
+Chas 		: 10000
+Kembalian	: 0
+--------------------------------------------------------
+
+Kasir bertugas : Asty
+Fri Dec 31 15:25:19 2021
+
+Pesanan		Jumlah		Harga
+Dada		4 X 10000	40000
+Sayap		2 X 6000	12000
+Nasi		4 X 5000	20000
+Minuman		4 X 3000	12000
+Total 		:Rp 84000
+Chas 		:Rp 100000
+Kembalian	:Rp 16000
+--------------------------------------------------------
+
