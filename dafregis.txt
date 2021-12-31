@@ -1,4 +1,4 @@
-	DATA DIRI KASIR AYAM GEPREK'86
+  REC0RD DATA DIRI KASIR AYAM GEPREK'86
 ==========================================	
 Nama		:arypurwanthi
 Alamat		:badung
