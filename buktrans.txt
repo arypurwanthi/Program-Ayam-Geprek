@@ -1,6 +1,6 @@
 		RECORD TRANSAKSI DI AYAM GEPREK '86'
 =========================================================
-Kasir bertugas : Asty
+Kasir bertugas : Asty
 Fri Dec 31 09:56:52 2021
 
 Pesanan		Jumlah		Harga
@@ -11,7 +11,7 @@ Chas 		: 40000
 Kembalian	: 1000
 --------------------------------------------------------
 
-Kasir bertugas : Asty
+Kasir bertugas : Ary
 Fri Dec 31 09:57:08 2021
 
 Pesanan		Jumlah		Harga
@@ -21,7 +21,7 @@ Chas 		: 50000
 Kembalian	: 25000
 --------------------------------------------------------
 
-Kasir bertugas : Asty
+Kasir bertugas : Ary
 Fri Dec 31 14:32:29 2021
 
 Pesanan		Jumlah		Harga
