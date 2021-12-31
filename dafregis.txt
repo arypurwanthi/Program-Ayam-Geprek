@@ -1,0 +1,9 @@
+	DATA DIRI KASIR AYAM GEPREK'86
+==========================================	
+Nama		:arypurwanthi
+Alamat		:badung
+Umur		:18
+No HP		:087761551841
+Username	:kasir1
+Password	:ary
+
