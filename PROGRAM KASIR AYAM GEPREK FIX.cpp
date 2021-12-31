@@ -19,6 +19,8 @@ struct kasir{
 /*fungsi dengan argumen untuk proses registrasi*/
 void regis(){
 	char simpan;	        //untuk memilih simpan data registrasi atau tidak
+	FILE*freg;
+	freg=fopen("dafregis.txt","a");
 	
 	isi_data:		//identifier isi_data
 	struct kasir k1;
@@ -30,20 +32,32 @@ void regis(){
 	printf("\t\t\t\tNama		:");
 	scanf("%s", &k1.nama);
 	fflush(stdin);
+	fprintf(freg, "Nama		:%s\n",k1.nama);
 	printf("\t\t\t\tAlamat		:");
 	scanf("%s", &k1.alamat);
 	fflush(stdin);
+	fprintf(freg, "Alamat		:%s\n",k1.alamat);
 	printf("\t\t\t\tUmur		:");
 	scanf("%d", &k1.umur);
+	fflush(stdin);
+	fprintf(freg, "Umur		:%d\n",k1.umur);
 	printf("\t\t\t\tNo Hp		:");
 	scanf("%s", &k1.telp);
+	fflush(stdin);
+	fprintf(freg, "No HP		:%s\n",k1.telp);
 	printf("\t\t\t\tBuat Username	:");
 	scanf("%s", &k1.user);
+	fflush(stdin);
+	fprintf(freg, "Username	:%s\n",k1.user);
 	printf("\t\t\t\tBuat Password	:");
 	scanf("%s", &k1.pass);
+	fflush(stdin);
+	fprintf(freg, "Password	:%s\n\n",k1.pass);
 	printf("\t\t\t\t-----------------------------------\n");
+	
 	printf("\t\t\t\tSimpan Data (Y) Atau Ulang (U) ?");
 	scanf("%s", &simpan);
+	fflush(stdin);
 	if(simpan=='Y'|| simpan=='y'){
 		printf("\n");
 		printf("\t\t\t\t============================\n");
@@ -207,7 +221,8 @@ void pesan(){
   system("pause");
   system("cls");
   
-  	/*Struk belanja*/
+  	
+	/*Struk belanja*/
   	printf("\n");
 	printf("\t\t\t\t===================================\n");
 	printf("\t\t\t\t||        AYAM GEPREK'86         ||\n");
@@ -216,6 +231,7 @@ void pesan(){
 	printf("\t\t\t\tKasir :");
 	scanf("%s", &kasir[10]);
 	fflush(stdin);
+	fprintf(out,"Kasir bertugas : %s\n", kasir);
 	time(&t);
 	printf("\t\t\t\t%s", ctime(&t));
 	fprintf(out,"%s\n", ctime(&t));
@@ -228,6 +244,7 @@ void pesan(){
 		fprintf(out,"%s		%d X %d	%d", nama[i], jumlah[i], harga_satuan[i], harga[i]);
     		fprintf(out,"\n");
   	}
+	
 	printf("\t\t\t\t-----------------------------------\n");
   	printf("\t\t\t\ttotal		:Rp %d\n", total);
 	fprintf(out,"Total 		: %d\n", total);
