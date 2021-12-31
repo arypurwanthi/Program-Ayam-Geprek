@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#include <conio.h>
 void regis();		//deklarasi fungsi regis
 void login();		//deklarasi fungsi login
 void menu();		//deklarasi fungsi menu
@@ -218,7 +219,7 @@ void pesan(){
    total+=harga[i];
   }
   printf("\n");
-  system("pause");
+  getch();
   system("cls");
   
   	
