@@ -18,7 +18,7 @@ struct kasir{
 
 /*fungsi dengan argumen untuk proses registrasi*/
 void regis(){
-	char simpan;	//untuk memilih simpan data registrasi atau tidak
+	char simpan;	        //untuk memilih simpan data registrasi atau tidak
 	
 	isi_data:		//identifier isi_data
 	struct kasir k1;
@@ -59,9 +59,9 @@ void regis(){
 
 /*fungsi dengan argumen untuk login kasir*/
 void login(){
-	char user[20]; 	//input user pegawai
-  	char pass[20]; 	//input password pegawai
-  	char ulang;		//mengulangi proses login ketika salah username dan atau password
+	char user[20]; 	         //input user pegawai
+  	char pass[20]; 	         //input password pegawai
+  	char ulang;	         //mengulangi proses login ketika salah username dan atau password
 	do{
 		printf("\t\t\t\t************Login Kasir**************\n\n");
 		printf("\t\t\t\tMasukan Username	: ");
@@ -255,8 +255,8 @@ void pesan(){
 
 /*fungsi utama*/
 int main(){
-  	int tujuan;	//pilihan menu tujuan registrasi atau login
-  	char ke_login;	//untuk memilih setelah regis ke menu login atau keluar
+  	int tujuan;	        //pilihan menu tujuan registrasi atau login
+  	char ke_login;	        //untuk memilih setelah regis ke menu login atau keluar
   	
   	awal:			//identifier awal
   	printf("\t\t\t\t-----------------------------------------\n");
