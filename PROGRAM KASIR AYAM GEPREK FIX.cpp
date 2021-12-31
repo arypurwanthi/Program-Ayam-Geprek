@@ -138,12 +138,12 @@ void menu(){
 
 /*Fungsi dengan argumen untuk pemesanan dan struk*/
 void pesan(){
-  int jmlh_pesan;	//banyaknya pesanan berdasarkan jenis menu
-  int i;		//variavel looping untuk pemesanan
-  int kode;		//kode menu yang dipesanan
-  int jumlah[10];	//jumlah pesanan per menu yang dipesan
-  int harga_satuan[10];	//harga satuan menu
-  int harga[20];	//harga satuan dikalikan jumlah pesan
+  int jmlh_pesan;	     //banyaknya pesanan berdasarkan jenis menu
+  int i;		     //variavel looping untuk pemesanan
+  int kode;		     //kode menu yang dipesanan
+  int jumlah[10];	     //jumlah pesanan per menu yang dipesan
+  int harga_satuan[10];	     //harga satuan menu
+  int harga[20];	     //harga satuan dikalikan jumlah pesan
   char nama[10][10];	//nama menu pesanan
   char kasir[10];	//nama kasir
   int total=0;		//total pembayaran semua pesanan
