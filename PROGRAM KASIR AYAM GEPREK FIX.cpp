@@ -144,13 +144,13 @@ void pesan(){
   int jumlah[10];	     //jumlah pesanan per menu yang dipesan
   int harga_satuan[10];	     //harga satuan menu
   int harga[20];	     //harga satuan dikalikan jumlah pesan
-  char nama[10][10];	//nama menu pesanan
-  char kasir[10];	//nama kasir
-  int total=0;		//total pembayaran semua pesanan
-  time_t t;		//waktu pembayaran di kasir
-  int cash;		//jumlah uang yang diberikan pembeli
-  int kembalian;	//kembalian dari uang yang dibayar pembeli
-  char kembali;		//kembali mengulang kasir untuk pembayaran kasir berikutnya
+  char nama[10][10];	     //nama menu pesanan
+  char kasir[10];	     //nama kasir
+  int total=0;		     //total pembayaran semua pesanan
+  time_t t;		     //waktu pembayaran di kasir
+  int cash;		     //jumlah uang yang diberikan pembeli
+  int kembalian;	     //kembalian dari uang yang dibayar pembeli
+  char kembali;		     //kembali mengulang kasir untuk pembayaran kasir berikutnya
 	
   FILE*out;
   out=fopen("buktrans.txt","a");
