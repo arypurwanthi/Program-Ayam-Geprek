@@ -108,6 +108,12 @@ void login(){
 			system("cls");
 			}
 			else{
+				system("cls");
+				printf("\n");
+				printf("\t\t\t\t================================\n");
+				printf("\t\t\t\t==	Terima Kasih:)	     ==\n");
+				printf("\t\t\t\t================================\n");
+				printf("\n");
 				exit(0);
 			}
 		}
@@ -145,6 +151,7 @@ void pesan(){
   int cash;		//jumlah uang yang diberikan pembeli
   int kembalian;	//kembalian dari uang yang dibayar pembeli
   char kembali;		//kembali mengulang kasir untuk pembayaran kasir berikutnya
+	
   FILE*out;
   out=fopen("buktrans.txt","a");
 	
@@ -274,7 +281,13 @@ void pesan(){
 	  	pesan();
  	}
   	else{
-  		exit(0);
+  		system("cls");
+		printf("\n");
+		printf("\t\t\t\t================================\n");
+		printf("\t\t\t\t==	Terima Kasih:)	     ==\n");
+		printf("\t\t\t\t================================\n");
+		printf("\n");
+		exit(0);
  	}
 }
 	while(kembali=='y'||kembali=='Y');
@@ -313,6 +326,12 @@ int main(){
   				login();	
 			}
 			else{
+				system("cls");
+				printf("\n");
+				printf("\t\t\t\t================================\n");
+				printf("\t\t\t\t==	Terima Kasih:)	     ==\n");
+				printf("\t\t\t\t================================\n");
+				printf("\n");
 				exit(0);
 			}
   			break;
@@ -320,6 +339,11 @@ int main(){
   			login();
 			break;
 		case 3:
+			printf("\n");
+			printf("\t\t\t\t================================\n");
+			printf("\t\t\t\t==	Terima Kasih:)	     ==\n");
+			printf("\t\t\t\t================================\n");
+			printf("\n");
 			exit(0);
 			break;
 		default:
