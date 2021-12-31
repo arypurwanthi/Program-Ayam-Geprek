@@ -91,7 +91,7 @@ void login(){
 		printf("\n");
 		printf ("\t\t\t\t=========Akses diterima==========\n\n");
 	
-		system ("\t\t\t\t\npause");
+		system ("pause>nul|echo \t\t\t\tTekan Enter untuk lanjut");
 		system("cls");
 		menu();
 		pesan();
@@ -325,9 +325,8 @@ int main(){
 		default:
 			printf("\t\t\t\t----------------------------\n");
 			printf("\t\t\t\tMenu pulihan anda salah!\n");
-			printf("\t\t\t\tTekan ENTER untuk mengulang\n");
-			printf("\t\t\t\t----------------------------\n");
-			system("\t\t\t\tpause");
+			printf("\t\t\t\t----------------------------\n\n");
+			system ("pause>nul|echo \t\t\t\tTekan Enter untuk lanjut");
 			system("cls");
 			goto awal;
 			break;
