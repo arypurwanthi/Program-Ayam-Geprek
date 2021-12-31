@@ -231,7 +231,7 @@ void pesan(){
 	printf("\t\t\t\tKasir :");
 	scanf("%s", &kasir[10]);
 	fflush(stdin);
-	fprintf(out,"Kasir bertugas : %s\n", kasir);
+	fprintf(out,"Kasir bertugas : %s\n", kasir, sizeof(kasir);
 	time(&t);
 	printf("\t\t\t\t%s", ctime(&t));
 	fprintf(out,"%s\n", ctime(&t));
@@ -285,6 +285,8 @@ void pesan(){
 int main(){
   	int tujuan;	        //pilihan menu tujuan registrasi atau login
   	char ke_login;	        //untuk memilih setelah regis ke menu login atau keluar
+	FILE*freg;
+	freg=fopen("dafregis.txt","a");
   	
   	awal:			//identifier awal
   	printf("\t\t\t\t-----------------------------------------\n");
@@ -306,6 +308,7 @@ int main(){
   			scanf("%s", &ke_login);
   			if (ke_login=='Y'||ke_login=='y'){
   				system("cls");
+				fclose(freg);
   				login();	
 			}
 			else{
