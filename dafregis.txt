@@ -7,3 +7,11 @@ No HP		:087761551841
 Username	:kasir1
 Password	:ary
 
+	
+Nama		:swastymaharani
+Alamat		:gianyar
+Umur		:18
+No HP		:083120963689
+Username	:kasir2
+Password	:swasty
+
